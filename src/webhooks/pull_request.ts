@@ -24,6 +24,7 @@ async function on_pr_review_added(data: any) {
 
 export default function handle(event: string, data: any) {
 
+	// Ignore unhandled events (other than those)
 	if(["create", "pull_request", "issue_comment", "pull_request_review"].indexOf(event) === -1) {
 		return;
 	}
